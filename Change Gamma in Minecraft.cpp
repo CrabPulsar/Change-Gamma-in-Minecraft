@@ -1,11 +1,3 @@
-/*
- * Change Gamma in Minecraft.cpp
- *
- * Created on: Aug 8, 2021
- * Last Modified: Aug 15, 2021
- * Author: CrabPulsar
- */
-
 #include <iostream>
 #include <fstream>
 #include <string>
