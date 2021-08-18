@@ -34,7 +34,8 @@ int main() {
 
 	cout << "Would you like to change your gamma? y/n" << endl;
 	cin >> answer;
-	if (answer == "n" || "N") {
+	transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+	if (answer == "n") {
 		cout << "No changes will be made." << endl;
 		inFile.close();
 		system("pause");
@@ -50,7 +51,8 @@ int main() {
 				cout << "Gamma is already maxed." << endl;
 				cout << "Would you like to revert it back to normal? y/n" << endl;
 				cin >> answer;
-				if (answer == "y" || "Y") {
+				transform(answer.begin(), answer.end(), answer.begin(), ::tolower);
+				if (answer == "y") {
 					writeToFile(counter - 5, "1.0");
 					cout << "The gamma has been reset to default (1.0)" << endl;
 					break;
